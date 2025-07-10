@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CerveretaDev - Desarrollo Web Profesional</title>
+    <meta name="description" content="CerveretaDev - Especialista en desarrollo web moderno. Creamos sitios web responsivos, aplicaciones web y soluciones digitales innovadoras.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="images/yo5.png" alt="CerveretaDev Logo" class="logo-img">
+                <span class="logo-text">CerveretaDev</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
+                <li><a href="#tecnologias" class="nav-link">Tecnologías</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle">🌙</button>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Sección Inicio/Hero -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">CerveretaDev</span>
+                    </h1>
+                    <h2 class="hero-subtitle">Desarrollo Web Moderno y Profesional</h2>
+                    <p class="hero-description">
+                        Especialista en crear sitios web únicos, aplicaciones interactivas y soluciones digitales 
+                        que destacan por su diseño innovador y funcionalidad excepcional.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#portafolio" class="btn btn-primary">Ver Portafolio</a>
+                        <a href="#contacto" class="btn btn-secondary">Contactar</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <img src="images/yo5.png" alt="Desarrollador CerveretaDev" class="hero-profile">
+                        <div class="floating-elements">
+                            <div class="floating-icon html">HTML5</div>
+                            <div class="floating-icon css">CSS3</div>
+                            <div class="floating-icon js">JS</div>
+                            <div class="floating-icon php">PHP</div>
+                            <div class="floating-icon sql">SQL</div>                    
+                            <div class="floating-icon node">Node.js</div>
+                            <div class="floating-icon git">Git</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Servicios -->
+        <section id="servicios" class="services">
+            <div class="container">
+                <h2 class="section-title">Servicios Profesionales</h2>
+                <p class="section-subtitle">Soluciones completas para tu presencia digital</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🌐</div>
+                        <h3>Desarrollo Web</h3>
+                        <p>Sitios web modernos, responsivos y optimizados para SEO utilizando las últimas tecnologías.</p>
+                        <ul class="service-features">
+                            <li>HTML5, CSS3, JavaScript</li>
+                            <li>Diseño Responsive</li>
+                            <li>Optimización SEO</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3>Aplicaciones Web</h3>
+                        <p>Aplicaciones web interactivas con funcionalidades avanzadas y experiencia de usuario excepcional.</p>
+                        <ul class="service-features">
+                            <li>SPA (Single Page Applications)</li>
+                            <li>API Integrations</li>
+                            <li>Base de datos</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🎨</div>
+                        <h3>Diseño UI/UX</h3>
+                        <p>Interfaces intuitivas y atractivas que convierten visitantes en clientes satisfechos.</p>
+                        <ul class="service-features">
+                            <li>Prototipado</li>
+                            <li>Experiencia de Usuario</li>
+                            <li>Diseño Visual</li>
+                        </ul>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🚀</div>
+                        <h3>Optimización</h3>
+                        <p>Mejora del rendimiento, velocidad de carga y posicionamiento en buscadores.</p>
+                        <ul class="service-features">
+                            <li>Performance</li>
+                            <li>SEO Técnico</li>
+                            <li>Accesibilidad</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Portafolio -->
+        <section id="portafolio" class="portfolio">
+            <div class="container">
+                <h2 class="section-title">Portafolio de Proyectos</h2>
+                <p class="section-subtitle">Algunos de mis trabajos más destacados</p>
+                
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="web">Sitios Web</button>
+                    <button class="filter-btn" data-filter="app">Aplicaciones</button>
+                    <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                </div>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="project-placeholder">
+                                    <span>🏢</span>
+                                    <h4>Sitio Corporativo</h4>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Website Corporativo</h3>
+                                <p>Desarrollo de sitio web institucional con diseño moderno y sistema de gestión de contenidos.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                <a href="#" class="portfolio-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="project-placeholder">
+                                    <span>📱</span>
+                                    <h4>App Web</h4>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Aplicación de Gestión</h3>
+                                <p>Sistema web para gestión de tareas con interfaz intuitiva y funcionalidades avanzadas.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Local Storage</span>
+                                    <span class="tech-tag">PWA</span>
+                                </div>
+                                <a href="#" class="portfolio-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="ecommerce">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="project-placeholder">
+                                    <span>🛒</span>
+                                    <h4>E-commerce</h4>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Tienda Online</h3>
+                                <p>Plataforma de comercio electrónico con carrito de compras y sistema de pagos integrado.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                <a href="#" class="portfolio-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-category="web">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <div class="project-placeholder">
+                                    <span>🎨</span>
+                                    <h4>Portfolio</h4>
+                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Portfolio Creativo</h3>
+                                <p>Sitio web portfolio para artista digital con galería interactiva y animaciones.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">CSS Animations</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Responsive</span>
+                                </div>
+                                <a href="#" class="portfolio-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Tecnologías -->
+        <section id="tecnologias" class="technologies">
+            <div class="container">
+                <h2 class="section-title">Tecnologías y Herramientas</h2>
+                <p class="section-subtitle">Stack tecnológico moderno para soluciones efectivas</p>
+                
+                <div class="tech-categories">
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Frontend</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <div class="tech-icon">🏗️</div>
+                                <span>HTML5</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="95"></div>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🎨</div>
+                                <span>CSS3</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="90"></div>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">⚡</div>
+                                <span>JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="85"></div>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">📱</div>
+                                <span>Responsive Design</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="92"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tech-category">
+                        <h3 class="tech-category-title">Herramientas</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <div class="tech-icon">🔧</div>
+                                <span>Git & GitHub</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="88"></div>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">💻</div>
+                                <span>VS Code</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="95"></div>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🎯</div>
+                                <span>Figma</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="80"></div>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🚀</div>
+                                <span>Optimization</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="87"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-subtitle">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Información de Contacto</h3>
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:josecervereta@gmail.com">josecervereta@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+34 622 564 303</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Ubicación</h4>
+                                <p>Vila-real</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div>
+                                <h4>Horario</h4>
+                                <p>Lun - Dom: 9:00 - 20:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form class="contact-form" id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nombre</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/yo5.png" alt="CerveretaDev" class="footer-logo-img">
+                        <span>CerveretaDev</span>
+                    </div>
+                    <p>Desarrollo web profesional con tecnologías modernas para crear experiencias digitales excepcionales.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#tecnologias">Tecnologías</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicios">Desarrollo Web</a></li>
+                        <li><a href="#servicios">Aplicaciones Web</a></li>
+                        <li><a href="#servicios">Diseño UI/UX</a></li>
+                        <li><a href="#servicios">Optimización</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sígueme</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/cervereta" class="social-link" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/feed/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="#" class="social-link" rel="noopener">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CerveretaDev. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="script.js"></script>
+</body>
+</html>
