@@ -289,15 +289,14 @@ body {
     backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 3rem; /* Aumentamos el padding para más espacio interno */
     box-shadow: var(--shadow-lg);
-}
-
-.hero-profile {
-    width: 100%;
-    height: auto;
-    border-radius: 1.5rem;
-    object-fit: cover;
+    height: 400px; /* Tamaño fijo más grande */
+    width: 400px; /* Ancho fijo para una tarjeta cuadrada */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centra la tarjeta horizontalmente */
 }
 
 .floating-elements {
@@ -307,10 +306,14 @@ body {
     right: 0;
     bottom: 0;
     pointer-events: none;
+    display: grid; /* Cambiamos a grid para mejor distribución */
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    grid-template-rows: repeat(3, 1fr); /* 3 filas iguales */
+    gap: 1.5rem; /* Separación entre iconos */
+    padding: 1rem;
 }
 
 .floating-icon {
-    position: absolute;
     background: var(--glass-bg);
     backdrop-filter: blur(10px);
     border: 1px solid var(--glass-border);
@@ -319,60 +322,41 @@ body {
     font-size: 0.875rem;
     font-weight: 600;
     color: var(--primary-color);
+    text-align: center;
     animation: float 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+    display: flex; /* Cambiamos a flex para centrar verticalmente */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 40px; /* Añadimos altura fija para un círculo más definido */
+    width: 100px; /* Añadimos ancho fijo para un círculo más definido */
+    box-sizing: border-box; /* Incluye padding en el cálculo del tamaño */
 }
 
-.floating-icon.html {
-    top: 20%;
-    right: -10%;
-    animation-delay: 0s;
-}
+/* Posiciones específicas usando grid (opcional, pero simplificado) */
 
-.floating-icon.css {
-    top: 60%;
-    left: -15%;
-    animation-delay: 1s;
-}
-
-.floating-icon.js {
-    bottom: 20%;
-    right: -5%;
-    animation-delay: 2s;
-}
-
-.floating-icon.php {
-    top: 10%;
-    left: -15%;
-    animation-delay: 0.5s;
-}
-
-.floating-icon.sql {
-    bottom: 10%;
-    right: -10%;
-    animation-delay: 1s;
-}
-
-.floating-icon.react {
-    top: 40%;
-    left: -10%;
-    animation-delay: 1.5s;
-}
-
-.floating-icon.node {
-    bottom: 40%;
-    right: -15%;
-    animation-delay: 2s;
-}
-
-.floating-icon.git {
-    top: 70%;
-    left: 10%;
-    animation-delay: 2.5s;
-}
+.floating-icon.html { grid-column: 1; grid-row: 1; }
+.floating-icon.css { grid-column: 2; grid-row: 1; }
+.floating-icon.js { grid-column: 3; grid-row: 1; }
+.floating-icon.php { grid-column: 1; grid-row: 2; }
+.floating-icon.sql { grid-column: 2; grid-row: 2; }
+.floating-icon.node { grid-column: 3; grid-row: 2; }
+.floating-icon.git { grid-column: 2; grid-row: 3; }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0px); }
+    0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+    .hero-card {
+        height: 300px;
+        width: 300px;
+    }
+    .floating-elements {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
+        grid-template-rows: repeat(4, 1fr); /* 4 filas */
+    }
 }
 
 
