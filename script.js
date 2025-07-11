@@ -1,5 +1,31 @@
 // CerveretaDev - JavaScript Principal
 document.addEventListener('DOMContentLoaded', () => {
+    // Detectar Safari y desactivar backdrop-filter si es el caso
+    function isSafari() {
+        return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+    }
+
+    if (isSafari()) {
+        const styleSheets = document.styleSheets;
+        for (let sheet of styleSheets) {
+            try {
+                const rules = sheet.cssRules || sheet.rules;
+                for (let rule of rules) {
+                    if (rule.style) {
+                        if (rule.style.backdropFilter) {
+                            rule.style.backdropFilter = '';
+                        }
+                        if (rule.style.webkitBackdropFilter) {
+                            rule.style.webkitBackdropFilter = '';
+                        }
+                    }
+                }
+            } catch (e) {
+                console.log("No se pudo acceder a las reglas de estilo debido a restricciones de CORS:", e);
+            }
+        }
+    }
+
     initializeTheme();
     initializeMobileMenu();
     initializeSmoothScrolling();
@@ -197,7 +223,7 @@ function showNotification(message, type = 'info') {
     if (existingNotification) existingNotification.remove();
     const notification = document.createElement('div');
     notification.className = `notification notification-${type}`;
-    notification.innerHTML = `<span>${message}</span><button class="notification-close">&times;</button>`;
+    notification.innerHTML = `<span>${message}</span><button class="notification-close">×</button>`;
     Object.assign(notification.style, {
         position: 'fixed',
         top: '20px',

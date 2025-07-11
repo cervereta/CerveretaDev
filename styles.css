@@ -156,6 +156,7 @@ body {
     font-size: 1rem;
     color: var(--text-color);
     transition: all 0.3s ease;
+    -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
 }
 
