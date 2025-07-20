@@ -130,10 +130,10 @@
         </section>
 
         <!-- Sección Portafolio -->
-        <section id="portafolio" class="portfolio">
+        <section class="portfolio" id="portafolio">
             <div class="container">
                 <h2 class="section-title">Portafolio de Proyectos</h2>
-                <p class="section-subtitle">Algunos de mis trabajos más destacados</p>
+                <p class="section-subtitle">Algunos de mis trabajos más destacados en producción</p>
                 
                 <div class="portfolio-filters">
                     <button class="filter-btn active" data-filter="all">Todos</button>
@@ -143,86 +143,116 @@
                 </div>
 
                 <div class="portfolio-grid">
-                    <div class="portfolio-item" data-category="web">
-                        <div class="portfolio-card">
-                            <div class="portfolio-image">
-                                <div class="project-placeholder">
-                                    <span>🏢</span>
-                                    <h4>Sitio Corporativo</h4>
-                                </div>
-                            </div>
-                            <div class="portfolio-content">
-                                <h3>Website Corporativo</h3>
-                                <p>Desarrollo de sitio web institucional con diseño moderno y sistema de gestión de contenidos.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">HTML5</span>
-                                    <span class="tech-tag">CSS3</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                </div>
-                                <a href="http://kioskopiruleta.22web.org" class="portfolio-link" target="_blank" rel="noopener">Ver Proyecto →</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="portfolio-item" data-category="app">
-                        <div class="portfolio-card">
-                            <div class="portfolio-image">
-                                <div class="project-placeholder">
-                                    <span>📱</span>
-                                    <h4>App Web</h4>
-                                </div>
-                            </div>
-                            <div class="portfolio-content">
-                                <h3>Aplicación de Gestión</h3>
-                                <p>Sistema web para gestión de tareas con interfaz intuitiva y funcionalidades avanzadas.</p>
-                                <div class="tech-tags">
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">Local Storage</span>
-                                    <span class="tech-tag">PWA</span>
-                                </div>
-                                <a href="http://apareander.22web.org" class="portfolio-link" target="_blank" rel="noopener">Ver Proyecto →</a>
-                            </div>
-                        </div>
-                    </div>
-
+                    <!-- Proyecto 1: Fruteria Brnita (ahora en E-commerce) -->
                     <div class="portfolio-item" data-category="ecommerce">
                         <div class="portfolio-card">
                             <div class="portfolio-image">
-                                <div class="project-placeholder">
-                                    <span>🛒</span>
-                                    <h4>E-commerce</h4>
-                                </div>
+                                <img src="images/fruteria.png" alt="Proyecto Frutería Brnita" loading="lazy">
                             </div>
                             <div class="portfolio-content">
-                                <h3>Tienda Online</h3>
-                                <p>Plataforma de comercio electrónico con carrito de compras y sistema de pagos integrado.</p>
+                                <h3>Frutería Benita</h3>
+                                <p>Sitio web para una frutería local con catálogo de productos, información de contacto y diseño responsivo.</p>
                                 <div class="tech-tags">
                                     <span class="tech-tag">HTML5</span>
                                     <span class="tech-tag">CSS3</span>
                                     <span class="tech-tag">JavaScript</span>
                                 </div>
-                                <a href="http://fruteriabrnita.byethost13.com" class="portfolio-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                                <a href="http://fruteriabrnita.byethost13.com" target="_blank" rel="noopener" class="portfolio-link">Ver Proyecto →</a>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Proyecto 2: Conecta4 -->
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/conecta4.png" alt="Proyecto Conecta4" loading="lazy">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Conecta4</h3>
+                                <p>Aplicación web interactiva del clásico juego Connect Four, con lógica de IA y modo multijugador local.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">HTML5 Canvas</span>
+                                    <span class="tech-tag">CSS Animations</span>
+                                </div>
+                                <a href="http://conecta4.22web.org" target="_blank" rel="noopener" class="portfolio-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 3: Apareander -->
+                    <div class="portfolio-item" data-category="app">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/apareander.png" alt="Proyecto Apareander" loading="lazy">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Apareander</h3>
+                                <p>Aplicación web para emparejamiento o matching, con interfaz intuitiva y algoritmos de coincidencia.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Local Storage</span>
+                                    <span class="tech-tag">Responsive Design</span>
+                                </div>
+                                <a href="http://apareander.22web.org" target="_blank" rel="noopener" class="portfolio-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 4: Kiosko Piruleta (ahora en E-commerce) -->
+                    <div class="portfolio-item" data-category="ecommerce">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/kiosko.png" alt="Proyecto Kiosko Piruleta" loading="lazy">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Kiosko Piruleta</h3>
+                                <p>Sitio web para un kiosko de dulces, con galería de productos y formulario de pedidos en línea.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">PHP</span>
+                                </div>
+                                <a href="http://kioskopiruleta.22web.org" target="_blank" rel="noopener" class="portfolio-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 5: Portafolio Cervereta -->
                     <div class="portfolio-item" data-category="web">
                         <div class="portfolio-card">
                             <div class="portfolio-image">
-                                <div class="project-placeholder">
-                                    <span>🎨</span>
-                                    <h4>Portfolio</h4>
-                                </div>
+                                <img src="images/portafolio.png" alt="Proyecto Portafolio Cervereta" loading="lazy">
                             </div>
                             <div class="portfolio-content">
-                                <h3>Portfolio Creativo</h3>
-                                <p>Sitio web portfolio para artista digital con galería interactiva y animaciones.</p>
+                                <h3>Portafolio Cervereta</h3>
+                                <p>Portfolio personal anterior, destacando proyectos y habilidades con diseño minimalista.</p>
                                 <div class="tech-tags">
-                                    <span class="tech-tag">CSS Animations</span>
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
                                     <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">Responsive</span>
                                 </div>
-                                <a href="http://portafoliocervereta.22web.org" class="portfolio-link" target="_blank" rel="noopener">Ver Proyecto →</a>
+                                <a href="http://portafoliocervereta.22web.org" target="_blank" rel="noopener" class="portfolio-link">Ver Proyecto →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 6: Panaderia Profesional (ahora en E-commerce) -->
+                    <div class="portfolio-item" data-category="ecommerce">
+                        <div class="portfolio-card">
+                            <div class="portfolio-image">
+                                <img src="images/panaderia.png" alt="Proyecto Panadería Profesional" loading="lazy">
+                            </div>
+                            <div class="portfolio-content">
+                                <h3>Panadería Profesional</h3>
+                                <p>Sitio web para panadería con menú de productos, horarios y reservas en línea.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS3</span>
+                                    <span class="tech-tag">SQL</span>
+                                </div>
+                                <a href="http://panaderiaprofesional.22web.org" target="_blank" rel="noopener" class="portfolio-link">Ver Proyecto →</a>
                             </div>
                         </div>
                     </div>
