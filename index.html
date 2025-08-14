@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/cervereta.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -32,6 +33,98 @@
     </nav>
 
     <main>
+        <!-- ChatBot Gemini -->
+        <div id="chatbot-gemini">
+            <button id="open-chatbot">💬</button>
+            <div id="chatbot-window">
+                <div class="chatbot-header">
+                    <span>Chat IA CerveretaDev</span>
+                    <button id="close-chatbot">✖</button>
+                </div>
+                <div id="chatbot-messages"></div>
+                <div class="chatbot-input-row">
+                    <input id="chatbot-input" type="text" placeholder="Escribe tu mensaje...">
+                    <button id="chatbot-send">Enviar</button>
+                </div>
+            </div>
+        </div>
+
+    <!-- ChatBot Gemini Script -->
+    <script>
+    // --- ChatBot Gemini ---
+    const chatbotBtn = document.getElementById('open-chatbot');
+    const chatbotWin = document.getElementById('chatbot-window');
+    const chatbotClose = document.getElementById('close-chatbot');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+    let chatbotHistory = [];
+
+    function addChatbotMsg(text, sender) {
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'chatbot-msg ' + sender;
+        msgDiv.style.marginBottom = '10px';
+        msgDiv.style.padding = '8px 12px';
+        msgDiv.style.borderRadius = '15px';
+        msgDiv.style.maxWidth = '80%';
+        msgDiv.style.wordBreak = 'break-word';
+        msgDiv.style.background = sender === 'user' ? '#007bff' : '#e2e6ea';
+        msgDiv.style.color = sender === 'user' ? '#fff' : '#333';
+        msgDiv.style.alignSelf = sender === 'user' ? 'flex-end' : 'flex-start';
+        msgDiv.textContent = text;
+        chatbotMessages.appendChild(msgDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function renderChatbotHistory() {
+        chatbotMessages.innerHTML = '';
+        // Solo mostrar el mensaje de bienvenida si no hay historial
+        if (chatbotHistory.length === 0) {
+            addChatbotMsg('¡Hola! Soy tu asistente IA Gemini. ¿En qué puedo ayudarte hoy?', 'bot');
+        } else {
+            chatbotHistory.forEach(msg => addChatbotMsg(msg.text, msg.role === 'user' ? 'user' : 'bot'));
+        }
+    }
+
+    chatbotBtn.onclick = () => {
+        chatbotWin.style.display = 'flex';
+        renderChatbotHistory();
+        setTimeout(() => chatbotInput.focus(), 200);
+    };
+    chatbotClose.onclick = () => {
+        chatbotWin.style.display = 'none';
+    };
+
+    async function sendChatbotMsg() {
+        const msg = chatbotInput.value.trim();
+        if (!msg) return;
+        addChatbotMsg(msg, 'user');
+        chatbotHistory.push({ role: 'user', text: msg });
+        chatbotInput.value = '';
+        try {
+            chatbotSend.disabled = true;
+            const res = await fetch('http://localhost:3001/chat', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ message: msg, history: chatbotHistory })
+            });
+            if (!res.ok) throw new Error('Error HTTP: ' + res.status);
+            const data = await res.json();
+            addChatbotMsg(data.reply, 'bot');
+            chatbotHistory.push({ role: 'model', text: data.reply });
+        } catch (e) {
+            addChatbotMsg('Lo siento, hubo un error al procesar tu mensaje.', 'bot');
+        } finally {
+            chatbotSend.disabled = false;
+        }
+    }
+    chatbotSend.onclick = sendChatbotMsg;
+    chatbotInput.addEventListener('keypress', e => {
+        if (e.key === 'Enter') sendChatbotMsg();
+    });
+    // Mensaje inicial
+    renderChatbotHistory();
+    </script>
         <!-- Sección Inicio/Hero -->
         <section id="inicio" class="hero">
             <div class="hero-content">
