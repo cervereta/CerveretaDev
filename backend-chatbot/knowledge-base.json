@@ -1,0 +1,56 @@
+{
+  "faqs": {
+    "precios": {
+      "keywords": ["precio", "costo", "coste", "tarifa", "presupuesto", "cuanto cuesta"],
+      "response": "Los precios de nuestros servicios varían según la complejidad del proyecto. Para obtener un presupuesto personalizado, por favor contacta con nosotros a través del formulario de contacto en la página web. Ofrecemos:\n- Sitios web básicos: Desde 500€\n- Aplicaciones web: Desde 1200€\n- Consultoría: 80€/hora\n- Mantenimiento: Desde 50€/mes"
+    },
+    "tiempo": {
+      "keywords": ["tiempo", "duración", "cuanto tarda", "plazo", "entrega", "deadline"],
+      "response": "Los tiempos de desarrollo dependen del tipo de proyecto:\n- Sitio web básico: 1-2 semanas\n- Sitio web complejo: 3-4 semanas\n- Aplicación web: 4-8 semanas\n- E-commerce: 6-10 semanas\nSiempre proporcionamos un cronograma detallado antes de comenzar el proyecto."
+    },
+    "contacto": {
+      "keywords": ["contacto", "contactar", "teléfono", "email", "ubicación", "dirección"],
+      "response": "Puedes contactar con CerveretaDev de varias formas:\n- Formulario de contacto en la página web (sección Contacto)\n- Email: contacto@cerveretadev.com\n- Teléfono: +34 600 123 456\nEstamos disponibles de lunes a viernes de 9:00 a 18:00. ¡Estaremos encantados de ayudarte!"
+    },
+    "tecnologias": {
+      "keywords": ["tecnología", "herramientas", "lenguajes", "framework", "stack"],
+      "response": "En CerveretaDev trabajamos con las tecnologías más modernas:\n- Frontend: HTML5, CSS3, JavaScript\n- Backend: PHP, Node.js\n- Bases de datos: SQL, MySQL\n- Control de versiones: Git\n- Diseño: CSS Grid, Flexbox, Responsive Design\n- SEO: Optimización para motores de búsqueda\n- Efectos: Glassmorphism, animaciones CSS"
+    },
+    "portafolio": {
+      "keywords": ["portafolio", "trabajos", "proyectos", "ejemplos", "referencias"],
+      "response": "Puedes ver nuestros trabajos en la sección 'Portafolio' de la página web. Allí encontrarás ejemplos de:\n- Sitios web corporativos\n- E-commerce\n- Aplicaciones web\n- Páginas de aterrizaje\nCada proyecto incluye detalles técnicos y resultados obtenidos. Si necesitas referencias específicas de tu sector, no dudes en consultarnos."
+    },
+    "mantenimiento": {
+      "keywords": ["mantenimiento", "actualización", "soporte", "hosting", "dominio"],
+      "response": "Ofrecemos servicios completos de mantenimiento web:\n- Actualizaciones de contenido\n- Copias de seguridad regulares\n- Monitoreo de seguridad\n- Optimización de velocidad\n- Soporte técnico 24/7\n- Gestión de hosting y dominios\nNuestros planes de mantenimiento están diseñados para mantener tu web siempre actualizada y segura."
+    },
+    "responsive": {
+      "keywords": ["responsive", "móvil", "tablet", "adaptable", "dispositivos"],
+      "response": "Todos nuestros sitios web son 100% responsive y se adaptan perfectamente a:\n- Dispositivos móviles (smartphones)\n- Tablets\n- Ordenadores de escritorio\n- Pantallas de alta resolución\nUtilizamos CSS Grid y Flexbox para garantizar una experiencia óptima en cualquier dispositivo. El diseño responsive está incluido en todos nuestros proyectos."
+    },
+    "seo": {
+      "keywords": ["seo", "posicionamiento", "google", "búsquedas", "ranking"],
+      "response": "Incluimos optimización SEO básica en todos nuestros proyectos:\n- Estructura HTML semántica\n- Meta tags optimizados\n- Velocidad de carga optimizada\n- URLs amigables\n- Sitemap XML\n- Integración con Google Analytics\nPara estrategias SEO avanzadas, ofrecemos servicios de consultoría especializados."
+    }
+  },
+  "services": {
+    "desarrollo_web": {
+      "name": "Desarrollo Web",
+      "description": "Sitios web modernos, responsivos y optimizados para SEO",
+      "technologies": ["HTML5", "CSS3", "JavaScript"],
+      "features": ["Diseño Responsive", "Optimización SEO", "Carga rápida"]
+    },
+    "aplicaciones_web": {
+      "name": "Aplicaciones Web", 
+      "description": "Aplicaciones web interactivas con funcionalidades avanzadas",
+      "technologies": ["SPA", "API Integrations", "PHP", "SQL"],
+      "features": ["Interfaz interactiva", "Base de datos", "Escalabilidad"]
+    },
+    "consultoria": {
+      "name": "Consultoría Digital",
+      "description": "Estrategias web, optimización y mantenimiento",
+      "technologies": ["Análisis técnico", "Auditorías", "Optimización"],
+      "features": ["Estrategias personalizadas", "Análisis detallado", "Mejora continua"]
+    }
+  }
+}

@@ -1,0 +1,199 @@
+================================================================================
+                     GUÍA COMPLETA DE DEPLOYMENT EN PRODUCCIÓN
+                              CerveretaDev - Sitio Web
+================================================================================
+
+📋 ANÁLISIS DEL PROYECTO
+========================
+
+Frontend (Sitio web principal):
+- HTML, CSS, JavaScript vanilla
+- MUY LIGERO y compatible con hosting compartido
+- Sin dependencias de servidor especiales
+
+Backend (Chatbot):
+- Node.js + Express
+- Gemini API
+- REQUIERE servidor Node.js
+
+================================================================================
+
+📦 OPCIONES DE DEPLOYMENT
+=========================
+
+⭐ OPCIÓN 1: HOSTING COMPARTIDO + SERVICIO EXTERNO (RECOMENDADA)
+Frontend: Hosting compartido (5-15€/mes)
+Backend: Vercel/Railway/Render (0-5€/mes)
+Total: 5-20€/mes
+
+✅ Ventajas:
+- Muy económico
+- Frontend súper rápido
+- Backend escalable
+- Fácil mantenimiento
+
+OPCIÓN 2: VPS COMPLETO
+VPS: 20-40€/mes
+Gestión: Tu responsabilidad
+
+OPCIÓN 3: HOSTING NODE.JS
+Hosting especializado: 15-30€/mes
+Todo en un lugar
+
+================================================================================
+
+🎯 RECOMENDACIÓN: OPCIÓN 1
+==========================
+
+FRONTEND EN HOSTING COMPARTIDO:
+- Proveedores: SiteGround, Hostinger, Webempresa (España)
+- Precio: 5-15€/mes
+- Incluye: SSL, dominio, email
+- Perfecto para: HTML/CSS/JS
+
+BACKEND EN SERVICIO CLOUD:
+- Vercel (gratis hasta cierto uso)
+- Railway (5$/mes)
+- Render (gratis con limitaciones)
+
+================================================================================
+
+🔧 CONFIGURACIONES NECESARIAS PARA PRODUCCIÓN
+==============================================
+
+1. VARIABLES DE ENTORNO (.env):
+NODE_ENV=production
+GEMINI_API_KEY=tu_key_real
+PORT=3000
+FRONTEND_URL=https://tudominio.com
+
+2. CORS ACTUALIZADO (en server.js):
+// Solo tu dominio
+res.setHeader('Access-Control-Allow-Origin', 'https://tudominio.com');
+
+3. CHATBOT ENDPOINT (en index.html):
+// Cambiar:
+const res = await fetch('https://tu-backend.vercel.app/chat', {
+
+================================================================================
+
+💡 PLAN DE DEPLOYMENT PASO A PASO
+==================================
+
+PASO 1: FRONTEND (Hosting compartido)
+- Subir archivos por FTP:
+  * index.html
+  * styles.css  
+  * script.js
+  * images/
+
+PASO 2: BACKEND (Vercel)
+- En directorio backend-chatbot/:
+  * npm run build (si es necesario)
+  * vercel deploy
+
+PASO 3: CONECTAR AMBOS
+- Actualizar URL del backend en el frontend
+- Configurar CORS correctamente
+- Probar funcionamiento completo
+
+================================================================================
+
+⚠️ CONSIDERACIONES IMPORTANTES
+===============================
+
+COSTOS API GEMINI:
+- ~$3-15 por millón de tokens
+- Con FAQs reduces uso significativamente
+- Monitorea consumo mensual
+
+SSL/HTTPS OBLIGATORIO:
+- Hosting compartido lo incluye automáticamente
+- APIs requieren HTTPS para funcionar
+
+PERFORMANCE:
+- Frontend estático = muy rápido
+- Backend separado = mejor escalabilidad
+
+================================================================================
+
+💰 PRESUPUESTO ESTIMADO MENSUAL
+===============================
+
+✅ RECOMENDADO:
+- Hosting compartido: 8€/mes
+- Backend Vercel: 0€/mes (gratis)
+- Dominio: 1€/mes
+- Gemini API: 2-5€/mes
+TOTAL: ~11-14€/mes
+
+❌ ALTERNATIVA MÁS CARA:
+- VPS: 25€/mes
+- Gestión técnica: Tu tiempo
+- Misma funcionalidad
+TOTAL: 25€/mes + tiempo de gestión
+
+================================================================================
+
+📋 CHECKLIST PRE-DEPLOYMENT
+============================
+
+ANTES DE SUBIR A PRODUCCIÓN:
+□ Probar chatbot localmente
+□ Verificar todas las FAQs funcionan
+□ Comprobar diseño responsive
+□ Optimizar imágenes (comprimir)
+□ Validar HTML/CSS
+□ Configurar variables de entorno
+□ Preparar dominio y hosting
+□ Configurar SSL (automático en hosting)
+□ Actualizar URLs en el código
+□ Probar formulario de contacto
+
+POST-DEPLOYMENT:
+□ Verificar chatbot funciona
+□ Comprobar todos los enlaces
+□ Probar en diferentes dispositivos
+□ Verificar velocidad de carga
+□ Configurar Google Analytics (opcional)
+□ Hacer backup de archivos
+
+================================================================================
+
+🚀 PROVEEDORES RECOMENDADOS
+============================
+
+HOSTING COMPARTIDO (ESPAÑA):
+- Webempresa: Excelente soporte técnico en español
+- SiteGround: Muy buena velocidad
+- Hostinger: Más económico
+
+BACKEND CLOUD:
+- Vercel: Perfecto para Node.js, muy fácil
+- Railway: Buenas prestaciones
+- Render: Alternativa sólida
+
+DOMINIOS:
+- Namecheap: Económico
+- GoDaddy: Popular
+- Incluso hosting (muchos lo incluyen)
+
+================================================================================
+
+📞 CONTACTO Y SOPORTE
+=====================
+
+Para dudas técnicas durante el deployment:
+- Soporte del hosting contratado
+- Documentación de Vercel: vercel.com/docs
+- Documentación de Gemini API: ai.google.dev
+
+NOTAS IMPORTANTES:
+- Guarda siempre backup antes de cambios
+- Prueba todo en entorno local primero
+- Monitorea costos API mensualmente
+- Actualiza esta guía si cambias algo
+
+================================================================================
+                              ¡ÉXITO EN TU DEPLOYMENT!
+================================================================================
