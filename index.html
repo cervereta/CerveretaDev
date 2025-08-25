@@ -1,15 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Meta básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CerveretaDev - Desarrollo Web Profesional</title>
-    <meta name="description" content="CerveretaDev - Especialista en desarrollo web moderno. Creamos sitios web responsivos, aplicaciones web y soluciones digitales innovadoras.">
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- SEO Principal -->
+    <title>CerveretaDev - Desarrollo Web con React, Next.js y IA | Especialista Frontend</title>
+    <meta name="description" content="José Cervereta, desarrollador web especializado en React, Next.js, TailwindCSS e IA. Creo aplicaciones web modernas y soluciones digitales para Pymes en Vila-real, Castellón.">
+    <meta name="keywords" content="desarrollador web, React, Next.js, TailwindCSS, desarrollo frontend, aplicaciones web, IA, automatización, Vila-real, Castellón, José Cervereta, CerveretaDev, páginas web, Pymes">
+    <meta name="author" content="José Cervereta - CerveretaDev">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="es">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Geo-localización -->
+    <meta name="geo.region" content="ES-VC">
+    <meta name="geo.placename" content="Vila-real, Castellón">
+    <meta name="geo.position" content="39.9333;-0.1">
+    <meta name="ICBM" content="39.9333, -0.1">
+    
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="CerveretaDev - Desarrollo Web con React, Next.js y IA">
+    <meta property="og:description" content="José Cervereta, desarrollador web especializado en React, Next.js, TailwindCSS e IA. Creo aplicaciones web modernas para Pymes en Vila-real, Castellón.">
+    <meta property="og:image" content="https://cerveretadev.es/images/yo5.png">
+    <meta property="og:url" content="https://cerveretadev.es">
+    <meta property="og:site_name" content="CerveretaDev">
+    <meta property="og:locale" content="es_ES">
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@cerveretadev">
+    <meta name="twitter:creator" content="@cerveretadev">
+    <meta name="twitter:title" content="CerveretaDev - Desarrollo Web con React, Next.js y IA">
+    <meta name="twitter:description" content="José Cervereta, desarrollador web especializado en React, Next.js, TailwindCSS e IA. Soluciones digitales para Pymes.">
+    <meta name="twitter:image" content="https://cerveretadev.es/images/yo5.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://cerveretadev.es">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/cervereta.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/yo5.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/yo5.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/yo5.png">
+    
+    <!-- Preconnect para rendimiento -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Fuentes optimizadas -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/cervereta.ico" type="image/x-icon">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "José Cervereta",
+      "alternateName": "CerveretaDev",
+      "jobTitle": "Desarrollador Web Frontend",
+      "description": "Desarrollador web especializado en React, Next.js, TailwindCSS e Inteligencia Artificial",
+      "url": "https://cerveretadev.es",
+      "image": "https://cerveretadev.es/images/yo5.png",
+      "telephone": "+34622564303",
+      "email": "josecervereta@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vila-real",
+        "addressRegion": "Castellón",
+        "addressCountry": "ES"
+      },
+      "sameAs": [
+        "https://github.com/cervereta",
+        "https://linkedin.com/in/cervereta"
+      ],
+      "knowsAbout": [
+        "React",
+        "Next.js",
+        "TailwindCSS",
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "Desarrollo Web",
+        "Inteligencia Artificial",
+        "Automatización"
+      ],
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.9333,
+          "longitude": -0.1
+        },
+        "geoRadius": "50000"
+      }
+    }
+    </script>
+    
+    <!-- Business Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "CerveretaDev",
+      "description": "Desarrollo web profesional especializado en React, Next.js y soluciones de IA para Pymes",
+      "url": "https://cerveretadev.es",
+      "telephone": "+34622564303",
+      "email": "josecervereta@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vila-real",
+        "addressRegion": "Castellón",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 39.9333,
+        "longitude": -0.1
+      },
+      "openingHours": "Mo-Su 09:00-20:00",
+      "priceRange": "€€",
+      "serviceArea": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 39.9333,
+          "longitude": -0.1
+        },
+        "geoRadius": "50000"
+      },
+      "areaServed": [
+        "Vila-real",
+        "Castellón",
+        "Comunidad Valenciana",
+        "España"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Desarrollo Web",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Desarrollo Web",
+              "description": "Sitios web modernos con React y Next.js"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Aplicaciones Web",
+              "@type": "Service",
+              "description": "SPAs interactivas con funcionalidades avanzadas"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Inteligencia Artificial",
+              "description": "Automatización y agentes IA personalizados"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -33,7 +196,8 @@
     </nav>
 
     <main>
-        <!-- ChatBot Gemini -->
+        <!-- ChatBot Gemini - TEMPORALMENTE DESACTIVADO -->
+        <!-- 
         <div id="chatbot-gemini">
             <button id="open-chatbot">💬</button>
             <div id="chatbot-window">
@@ -49,82 +213,82 @@
             </div>
         </div>
 
-    <!-- ChatBot Gemini Script -->
-    <script>
-    // --- ChatBot Gemini ---
-    const chatbotBtn = document.getElementById('open-chatbot');
-    const chatbotWin = document.getElementById('chatbot-window');
-    const chatbotClose = document.getElementById('close-chatbot');
-    const chatbotMessages = document.getElementById('chatbot-messages');
-    const chatbotInput = document.getElementById('chatbot-input');
-    const chatbotSend = document.getElementById('chatbot-send');
-    let chatbotHistory = [];
+        <script>
+        // --- ChatBot Gemini ---
+        const chatbotBtn = document.getElementById('open-chatbot');
+        const chatbotWin = document.getElementById('chatbot-window');
+        const chatbotClose = document.getElementById('close-chatbot');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotSend = document.getElementById('chatbot-send');
+        let chatbotHistory = [];
 
-    function addChatbotMsg(text, sender) {
-        const msgDiv = document.createElement('div');
-        msgDiv.className = 'chatbot-msg ' + sender;
-        msgDiv.style.marginBottom = '10px';
-        msgDiv.style.padding = '8px 12px';
-        msgDiv.style.borderRadius = '15px';
-        msgDiv.style.maxWidth = '80%';
-        msgDiv.style.wordBreak = 'break-word';
-        msgDiv.style.background = sender === 'user' ? '#007bff' : '#e2e6ea';
-        msgDiv.style.color = sender === 'user' ? '#fff' : '#333';
-        msgDiv.style.alignSelf = sender === 'user' ? 'flex-end' : 'flex-start';
-        msgDiv.textContent = text;
-        chatbotMessages.appendChild(msgDiv);
-        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-    }
-
-    function renderChatbotHistory() {
-        chatbotMessages.innerHTML = '';
-        // Solo mostrar el mensaje de bienvenida si no hay historial
-        if (chatbotHistory.length === 0) {
-            addChatbotMsg('¡Hola! Soy tu asistente IA Gemini. ¿En qué puedo ayudarte hoy?', 'bot');
-        } else {
-            chatbotHistory.forEach(msg => addChatbotMsg(msg.text, msg.role === 'user' ? 'user' : 'bot'));
+        function addChatbotMsg(text, sender) {
+            const msgDiv = document.createElement('div');
+            msgDiv.className = 'chatbot-msg ' + sender;
+            msgDiv.style.marginBottom = '10px';
+            msgDiv.style.padding = '8px 12px';
+            msgDiv.style.borderRadius = '15px';
+            msgDiv.style.maxWidth = '80%';
+            msgDiv.style.wordBreak = 'break-word';
+            msgDiv.style.background = sender === 'user' ? '#007bff' : '#e2e6ea';
+            msgDiv.style.color = sender === 'user' ? '#fff' : '#333';
+            msgDiv.style.alignSelf = sender === 'user' ? 'flex-end' : 'flex-start';
+            msgDiv.textContent = text;
+            chatbotMessages.appendChild(msgDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
         }
-    }
 
-    chatbotBtn.onclick = () => {
-        chatbotWin.style.display = 'flex';
+        function renderChatbotHistory() {
+            chatbotMessages.innerHTML = '';
+            // Solo mostrar el mensaje de bienvenida si no hay historial
+            if (chatbotHistory.length === 0) {
+                addChatbotMsg('¡Hola! Soy tu asistente IA Gemini. ¿En qué puedo ayudarte hoy?', 'bot');
+            } else {
+                chatbotHistory.forEach(msg => addChatbotMsg(msg.text, msg.role === 'user' ? 'user' : 'bot'));
+            }
+        }
+
+        chatbotBtn.onclick = () => {
+            chatbotWin.style.display = 'flex';
+            renderChatbotHistory();
+            setTimeout(() => chatbotInput.focus(), 200);
+        };
+        chatbotClose.onclick = () => {
+            chatbotWin.style.display = 'none';
+        };
+
+        async function sendChatbotMsg() {
+            const msg = chatbotInput.value.trim();
+            if (!msg) return;
+            addChatbotMsg(msg, 'user');
+            chatbotHistory.push({ role: 'user', text: msg });
+            chatbotInput.value = '';
+            try {
+                chatbotSend.disabled = true;
+                const res = await fetch('http://localhost:3001/chat', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: msg, history: chatbotHistory })
+                });
+                if (!res.ok) throw new Error('Error HTTP: ' + res.status);
+                const data = await res.json();
+                addChatbotMsg(data.reply, 'bot');
+                chatbotHistory.push({ role: 'model', text: data.reply });
+            } catch (e) {
+                addChatbotMsg('Lo siento, hubo un error al procesar tu mensaje.', 'bot');
+            } finally {
+                chatbotSend.disabled = false;
+            }
+        }
+        chatbotSend.onclick = sendChatbotMsg;
+        chatbotInput.addEventListener('keypress', e => {
+            if (e.key === 'Enter') sendChatbotMsg();
+        });
+        // Mensaje inicial
         renderChatbotHistory();
-        setTimeout(() => chatbotInput.focus(), 200);
-    };
-    chatbotClose.onclick = () => {
-        chatbotWin.style.display = 'none';
-    };
-
-    async function sendChatbotMsg() {
-        const msg = chatbotInput.value.trim();
-        if (!msg) return;
-        addChatbotMsg(msg, 'user');
-        chatbotHistory.push({ role: 'user', text: msg });
-        chatbotInput.value = '';
-        try {
-            chatbotSend.disabled = true;
-            const res = await fetch('http://localhost:3001/chat', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ message: msg, history: chatbotHistory })
-            });
-            if (!res.ok) throw new Error('Error HTTP: ' + res.status);
-            const data = await res.json();
-            addChatbotMsg(data.reply, 'bot');
-            chatbotHistory.push({ role: 'model', text: data.reply });
-        } catch (e) {
-            addChatbotMsg('Lo siento, hubo un error al procesar tu mensaje.', 'bot');
-        } finally {
-            chatbotSend.disabled = false;
-        }
-    }
-    chatbotSend.onclick = sendChatbotMsg;
-    chatbotInput.addEventListener('keypress', e => {
-        if (e.key === 'Enter') sendChatbotMsg();
-    });
-    // Mensaje inicial
-    renderChatbotHistory();
-    </script>
+        </script>
+        -->
         <!-- Sección Inicio/Hero -->
         <section id="inicio" class="hero">
             <div class="hero-content">
@@ -132,6 +296,7 @@
                     <h1 class="hero-title">
                         <span class="gradient-text">CerveretaDev</span>
                     </h1>
+                    <h2 class="hero-subtitle">Agencia IA</h2>
                     <h2 class="hero-subtitle">Desarrollo Web Moderno y Profesional</h2>
                     <p class="hero-description">
                         Especialista en crear sitios web únicos, aplicaciones interactivas y soluciones digitales 
@@ -144,28 +309,8 @@
                 </div>
                 <div class="hero-image">
                     <div class="hero-card">
-                        <div class="floating-elements">
-                            <div class="floating-icon html">HTML5
-                                <img src="images/html.png" alt="HTML5 Icon" class="icon-image">
-                            </div>
-                            <div class="floating-icon css">CSS3
-                                <img src="images/css.png" alt="CSS3 Icon" class="icon-image">
-                            </div>
-                            <div class="floating-icon js">JS
-                                <img src="images/js.png" alt="JS Icon" class="icon-image">
-                            </div>
-                            <div class="floating-icon php">PHP
-                                <img src="images/php2.png" alt="PHP Icon" class="icon-image">
-                            </div>
-                            <div class="floating-icon sql">SQL
-                                <img src="images/sql3.png" alt="SQL Icon" class="icon-image">
-                            </div>                    
-                            <div class="floating-icon node">Node.js
-                                <img src="images/node.png" alt="Node.js Icon" class="icon-image">
-                            </div>
-                            <div class="floating-icon git">Git
-                                <img src="images/git.png" alt="Git Icon" class="icon-image">
-                            </div>
+                        <div class="personal-image-container">
+                            <img src="images/yo5.png" alt="Jose Cervereta - Desarrollador Web" class="personal-image">
                         </div>
                     </div>
                 </div>
@@ -196,26 +341,6 @@
                             <li>SPA (Single Page Applications)</li>
                             <li>API Integrations</li>
                             <li>PHP y SQL</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🎨</div>
-                        <h3>Diseño UI/UX</h3>
-                        <p>Interfaces intuitivas y atractivas que convierten visitantes en clientes satisfechos.</p>
-                        <ul class="service-features">
-                            <li>Prototipado</li>
-                            <li>Experiencia de Usuario</li>
-                            <li>Diseño Visual</li>
-                        </ul>
-                    </div>
-                    <div class="service-card">
-                        <div class="service-icon">🚀</div>
-                        <h3>Optimización</h3>
-                        <p>Mejora del rendimiento, velocidad de carga y posicionamiento en buscadores.</p>
-                        <ul class="service-features">
-                            <li>Performance</li>
-                            <li>SEO Técnico</li>
-                            <li>Accesibilidad</li>
                         </ul>
                     </div>
                     <div class="service-card">
@@ -266,11 +391,11 @@
                         </div>
                     </div>
 
-                    <!-- Proyecto 2: Conecta4 -->
+                    <!-- Proyecto 2: Restaurante -->
                     <div class="portfolio-item" data-category="app">
                         <div class="portfolio-card">
                             <div class="portfolio-image">
-                                <img src="images/restaurante.png" alt="Proyecto Conecta4" loading="lazy">
+                                <img src="images/restaurante.png" alt="Proyecto Restaurante" loading="lazy">
                             </div>
                             <div class="portfolio-content">
                                 <h3>Restaurante</h3>
@@ -375,31 +500,31 @@
                         <h3 class="tech-category-title">Frontend</h3>
                         <div class="tech-grid">
                             <div class="tech-item">
-                                <div class="tech-icon">🏗️</div>
-                                <span>HTML5</span>
+                                <div class="tech-icon">⚛️</div>
+                                <span>React</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-skill="95"></div>
+                                    <div class="skill-progress" data-skill="92"></div>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🚀</div>
+                                <span>Next.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="88"></div>
                                 </div>
                             </div>
                             <div class="tech-item">
                                 <div class="tech-icon">🎨</div>
-                                <span>CSS3</span>
+                                <span>TailwindCSS</span>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-skill="90"></div>
                                 </div>
                             </div>
                             <div class="tech-item">
                                 <div class="tech-icon">⚡</div>
-                                <span>JavaScript</span>
+                                <span>JavaScript/TypeScript</span>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-skill="85"></div>
-                                </div>
-                            </div>
-                            <div class="tech-item">
-                                <div class="tech-icon">📱</div>
-                                <span>Responsive Design</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-skill="92"></div>
                                 </div>
                             </div>
                         </div>
@@ -416,6 +541,13 @@
                                 </div>
                             </div>
                             <div class="tech-item">
+                                <div class="tech-icon">📦</div>
+                                <span>Vercel & Netlify</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="85"></div>
+                                </div>
+                            </div>
+                            <div class="tech-item">
                                 <div class="tech-icon">💻</div>
                                 <span>VS Code</span>
                                 <div class="skill-bar">
@@ -423,17 +555,10 @@
                                 </div>
                             </div>
                             <div class="tech-item">
-                                <div class="tech-icon">🎯</div>
-                                <span>Figma</span>
+                                <div class="tech-icon">🤖</div>
+                                <span>Claude IA & MCPs</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-skill="80"></div>
-                                </div>
-                            </div>
-                            <div class="tech-item">
-                                <div class="tech-icon">🚀</div>
-                                <span>Automatización</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-skill="87"></div>
+                                    <div class="skill-progress" data-skill="92"></div>
                                 </div>
                             </div>
                         </div>
@@ -446,28 +571,28 @@
                                 <div class="tech-icon">🖥️</div>
                                 <span>Node.js</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-skill="75"></div>
-                                </div>
-                            </div>
-                            <div class="tech-item">
-                                <div class="tech-icon">🐘</div>
-                                <span>PHP</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-skill="70"></div>
+                                    <div class="skill-progress" data-skill="80"></div>
                                 </div>
                             </div>
                             <div class="tech-item">
                                 <div class="tech-icon">🔗</div>
                                 <span>API REST</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-skill="80"></div>
+                                    <div class="skill-progress" data-skill="85"></div>
                                 </div>
                             </div>
                             <div class="tech-item">
-                                <div class="tech-icon">🗃️</div> 
-                                <span>BD SQL</span>
+                                <div class="tech-icon">🔥</div>
+                                <span>Supabase</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-skill="87"></div>
+                                    <div class="skill-progress" data-skill="82"></div>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🚀</div>
+                                <span>Express.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-skill="78"></div>
                                 </div>
                             </div>
                         </div>
