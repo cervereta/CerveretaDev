@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatización Empresarial con IA | Experto Claude Code | Cervereta.es</title>
+    <meta name="description" content="Especialista en automatización empresarial con Claude Code. Integro ERPs, CRMs y herramientas de negocio para optimizar procesos y garantizar 150% ROI.">
+    <meta name="keywords" content="automatización empresarial, Claude Code, MCP, ERP, CRM, IA empresarial, marketing automation">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/cervereta.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/yo5.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/yo5.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/yo5.png">
+    
+    <style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #06b6d4;
+            --accent-color: #f59e0b;
+            --background: #FFFEDB;
+            --background-secondary: #FFF9C4;
+            --text-color: #1e293b;
+            --text-secondary: #64748b;
+            --navbar-bg: rgba(255, 254, 219, 0.95);
+            --glass-bg: rgba(255, 254, 219, 0.1);
+            --glass-border: rgba(255, 254, 219, 0.2);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --border-color: #F0E68C;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+            --white: #ffffff;
+        }
+
+        [data-theme="dark"] {
+            --primary-color: #6366f1;
+            --secondary-color: #22d3ee;
+            --accent-color: #fbbf24;
+            --background: #0f172a;
+            --background-secondary: #1e293b;
+            --text-color: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --navbar-bg: rgba(15, 23, 42, 0.95);
+            --glass-bg: rgba(0, 0, 0, 0.2);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+            --border-color: #374151;
+            --white: #1e293b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--background);
+            overflow-x: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: box-shadow 0.3s ease;
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .theme-toggle {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+            color: white;
+            transition: all 0.3s ease;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .theme-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff" fill-opacity="0.05" points="0,1000 1000,0 1000,1000"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background: var(--background-secondary);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--text-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .service-features li {
+            padding: 0.25rem 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        /* ROI Calculator */
+        .roi-calculator {
+            padding: 80px 0;
+            background: var(--background);
+        }
+
+        .calculator-container {
+            background: var(--background-secondary);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color);
+        }
+
+        .input-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .input-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-field label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-color);
+        }
+
+        .input-field input {
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background: var(--white);
+            color: var(--text-color);
+        }
+
+        .input-field input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        .roi-result {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .roi-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Case Studies */
+        .case-studies {
+            padding: 80px 0;
+            background: var(--background-secondary);
+        }
+
+        .case-study {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .case-study-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .case-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .metric {
+            text-align: center;
+            padding: 1rem;
+            background: var(--background-secondary);
+            border-radius: 10px;
+        }
+
+        .metric-value {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        /* Technologies */
+        .technologies {
+            padding: 80px 0;
+            background: var(--background);
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tech-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--background-secondary);
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .tech-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .tech-logo {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            margin: 0 auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            color: var(--text-color);
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+            background: var(--white);
+            color: var(--text-color);
+        }
+
+        .form-group textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--background-secondary);
+            padding: 4rem 0 2rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .footer-logo span {
+            font-size: 1.25rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-section p {
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .input-group {
+                grid-template-columns: 1fr;
+            }
+
+            .case-metrics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tech-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Floating Contact Button */
+        .floating-contact {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: var(--shadow-lg);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .floating-contact:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">🤖 Cervereta.es | Automatización IA</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#roi">ROI Calculator</a></li>
+                <li><a href="#casos">Casos de Éxito</a></li>
+                <li><a href="#tecnologias">Tecnologías</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+                <a href="#contacto" class="cta-button">Consulta Gratuita</a>
+            </div>
+            <button class="mobile-menu-toggle">☰</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Automatización Empresarial con IA</h1>
+                <p class="hero-subtitle">Especialista en Claude Code + MCPs | Integro ERPs, CRMs y herramientas de negocio para optimizar procesos y garantizar resultados medibles</p>
+                <a href="#contacto" class="cta-button" style="font-size: 1.1rem; padding: 1rem 2rem;">Transformar Mi Empresa</a>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">150%</div>
+                        <div class="stat-label">ROI Promedio Garantizado</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30%</div>
+                        <div class="stat-label">Reducción Costos Operativos</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">60%</div>
+                        <div class="stat-label">Aumento Productividad</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">Menos Errores Manuales</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2 class="section-title fade-in">Servicios de Automatización Empresarial</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔄</div>
+                    <h3>Automatización de Procesos ERP</h3>
+                    <p>Integro tu ERP (SAP, Microsoft Dynamics, Oracle, NetSuite) con Claude Code para automatizar flujos de trabajo complejos.</p>
+                    <ul class="service-features">
+                        <li>Gestión automática de inventario</li>
+                        <li>Facturación y contabilidad automatizada</li>
+                        <li>Reportes ejecutivos en tiempo real</li>
+                        <li>Predicciones financieras con IA</li>
+                        <li>Conciliación bancaria automática</li>
+                    </ul>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">📊</div>
+                    <h3>Marketing Automation + CRM</h3>
+                    <p>Optimizo tu CRM (Salesforce, HubSpot, Zoho) con automatizaciones inteligentes que convierten leads en clientes.</p>
+                    <ul class="service-features">
+                        <li>Lead scoring automático con IA</li>
+                        <li>Secuencias de email personalizadas</li>
+                        <li>Seguimiento de pipeline inteligente</li>
+                        <li>Integración omnicanal</li>
+                        <li>Análisis predictivo de ventas</li>
+                    </ul>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🤖</div>
+                    <h3>Claude Code + MCPs Personalizados</h3>
+                    <p>Desarrollo servidores MCP específicos para conectar Claude Code con tus sistemas únicos y herramientas existentes.</p>
+                    <ul class="service-features">
+                        <li>Integración con 100+ herramientas</li>
+                        <li>APIs personalizadas</li>
+                        <li>Automatización conversacional</li>
+                        <li>Workflows visuales intuitivos</li>
+                        <li>Escalabilidad ilimitada</li>
+                    </ul>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🔐</div>
+                    <h3>Seguridad y Cumplimiento</h3>
+                    <p>Implemento automatizaciones que cumplen con GDPR, LOPD y estándares empresariales de seguridad.</p>
+                    <ul class="service-features">
+                        <li>Encriptación end-to-end</li>
+                        <li>Logs de auditoría completos</li>
+                        <li>Backup automático</li>
+                        <li>Cumplimiento normativo</li>
+                        <li>Autenticación multi-factor</li>
+                    </ul>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">📈</div>
+                    <h3>Business Intelligence Automatizado</h3>
+                    <p>Creo dashboards inteligentes que se actualizan automáticamente y proporcionan insights accionables.</p>
+                    <ul class="service-features">
+                        <li>Dashboards ejecutivos en tiempo real</li>
+                        <li>KPIs automatizados</li>
+                        <li>Alertas inteligentes</li>
+                        <li>Análisis predictivo</li>
+                        <li>Reportes multi-departamento</li>
+                    </ul>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">🎯</div>
+                    <h3>Consultoría Estratégica</h3>
+                    <p>Análisis completo de tus procesos actuales y diseño de estrategia de automatización con ROI garantizado.</p>
+                    <ul class="service-features">
+                        <li>Auditoría de procesos</li>
+                        <li>Roadmap de automatización</li>
+                        <li>Formación de equipos</li>
+                        <li>Soporte continuo</li>
+                        <li>Optimización constante</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Calculator -->
+    <section class="roi-calculator" id="roi">
+        <div class="container">
+            <h2 class="section-title fade-in">Calculadora de ROI - Automatización Empresarial</h2>
+            <div class="calculator-container fade-in">
+                <p style="text-align: center; margin-bottom: 2rem; color: var(--text-secondary);">
+                    Descubre cuánto puedes ahorrar y ganar implementando automatización en tu empresa
+                </p>
+                
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="employees">Número de Empleados</label>
+                        <input type="number" id="employees" placeholder="ej: 25" min="1">
+                    </div>
+                    <div class="input-field">
+                        <label for="hourly-rate">Costo Hora Promedio (€)</label>
+                        <input type="number" id="hourly-rate" placeholder="ej: 25" min="1">
+                    </div>
+                    <div class="input-field">
+                        <label for="manual-hours">Horas Manuales/Semana</label>
+                        <input type="number" id="manual-hours" placeholder="ej: 20" min="1">
+                    </div>
+                    <div class="input-field">
+                        <label for="error-cost">Costo Errores/Mes (€)</label>
+                        <input type="number" id="error-cost" placeholder="ej: 2000" min="0">
+                    </div>
+                </div>
+
+                <button class="cta-button" onclick="calculateROI()" style="display: block; margin: 0 auto;">
+                    Calcular Mi ROI
+                </button>
+
+                <div class="roi-result" id="roi-result" style="display: none;">
+                    <div class="roi-number" id="roi-percentage">0%</div>
+                    <p>ROI Estimado en 12 meses</p>
+                    <div style="margin-top: 1rem;">
+                        <strong>Ahorro anual estimado: <span id="annual-savings">€0</span></strong><br>
+                        <span>Inversión típica: <span id="investment-cost">€0</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies" id="casos">
+        <div class="container">
+            <h2 class="section-title fade-in">Casos de Éxito Reales</h2>
+            
+            <div class="case-study fade-in">
+                <div class="case-study-header">
+                    <div class="company-logo">MF</div>
+                    <div>
+                        <h3>Empresa Manufacturera (50 empleados)</h3>
+                        <p style="color: var(--text-secondary);">Automatización completa de inventario y ventas</p>
+                    </div>
+                </div>
+                <p><strong>Desafío:</strong> Gestión manual de inventario, reportes semanales, leads desorganizados, errores frecuentes en pedidos.</p>
+                <p><strong>Solución:</strong> Integración Claude Code + SAP Business One + HubSpot CRM con MCPs personalizados.</p>
+                <div class="case-metrics">
+                    <div class="metric">
+                        <div class="metric-value">180%</div>
+                        <div>ROI en 12 meses</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">40%</div>
+                        <div>Reducción stockouts</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">60%</div>
+                        <div>Más conversión leads</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">€95k</div>
+                        <div>Ahorro anual</div>
+                    </div>
+                </div>
+                <p><strong>Resultado:</strong> Procesos 5x más rápidos, decisiones basadas en datos en tiempo real, crecimiento del 35% en ventas.</p>
+            </div>
+
+            <div class="case-study fade-in">
+                <div class="case-study-header">
+                    <div class="company-logo">CS</div>
+                    <div>
+                        <h3>Consultora de Servicios (25 empleados)</h3>
+                        <p style="color: var(--text-secondary);">Marketing automation y gestión de proyectos</p>
+                    </div>
+                </div>
+                <p><strong>Desafío:</strong> Pérdida de leads, seguimiento manual de proyectos, facturación inconsistente, reportes desactualizados.</p>
+                <p><strong>Solución:</strong> Salesforce + Microsoft Dynamics 365 + Claude Code con automatización de workflows completa.</p>
+                <div class="case-metrics">
+                    <div class="metric">
+                        <div class="metric-value">220%</div>
+                        <div>ROI en 10 meses</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">75%</div>
+                        <div>Más leads calificados</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">45%</div>
+                        <div>Menos tiempo admin</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">€120k</div>
+                        <div>Ingresos adicionales</div>
+                    </div>
+                </div>
+                <p><strong>Resultado:</strong> Pipeline de ventas automatizado, proyectos entregados a tiempo, equipo enfocado en tareas estratégicas.</p>
+            </div>
+
+            <div class="case-study fade-in">
+                <div class="case-study-header">
+                    <div class="company-logo">EC</div>
+                    <div>
+                        <h3>E-commerce (15 empleados)</h3>
+                        <p style="color: var(--text-secondary);">Automatización completa de ventas online</p>
+                    </div>
+                </div>
+                <p><strong>Desafío:</strong> Gestión manual de pedidos, atención al cliente lenta, inventario desactualizado, marketing ineficaz.</p>
+                <p><strong>Solución:</strong> NetSuite + HubSpot + Claude Code con integración completa de e-commerce y automatización de customer journey.</p>
+                <div class="case-metrics">
+                    <div class="metric">
+                        <div class="metric-value">290%</div>
+                        <div>ROI en 8 meses</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">85%</div>
+                        <div>Automatización pedidos</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">50%</div>
+                        <div>Más customer retention</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">€200k</div>
+                        <div>Crecimiento anual</div>
+                    </div>
+                </div>
+                <p><strong>Resultado:</strong> Operaciones 24/7 automatizadas, experiencia de cliente personalizada, crecimiento sostenible escalable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="technologies" id="tecnologias">
+        <div class="container">
+            <h2 class="section-title fade-in">Tecnologías que Domino</h2>
+            <p style="text-align: center; margin-bottom: 2rem; color: var(--text-secondary);">
+                Especialista certificado en las principales plataformas empresariales y herramientas de automatización
+            </p>
+            
+            <div class="tech-grid">
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">CC</div>
+                    <strong>Claude Code</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">SAP</div>
+                    <strong>SAP Business One</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">SF</div>
+                    <strong>Salesforce</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">HS</div>
+                    <strong>HubSpot</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">MS</div>
+                    <strong>Microsoft 365</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">OR</div>
+                    <strong>Oracle Cloud</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">NS</div>
+                    <strong>NetSuite</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">OD</div>
+                    <strong>Odoo</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">ZH</div>
+                    <strong>Zoho Suite</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">ZP</div>
+                    <strong>Zapier</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">PW</div>
+                    <strong>Power Automate</strong>
+                </div>
+                <div class="tech-item fade-in">
+                    <div class="tech-logo">GH</div>
+                    <strong>GitHub Actions</strong>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <h3>Metodología de Implementación</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                    <div>
+                        <h4>📋 Análisis</h4>
+                        <p>Auditoría completa de procesos actuales</p>
+                    </div>
+                    <div>
+                        <h4>🎯 Estrategia</h4>
+                        <p>Diseño de roadmap personalizado</p>
+                    </div>
+                    <div>
+                        <h4>⚡ Implementación</h4>
+                        <p>Desarrollo e integración progresiva</p>
+                    </div>
+                    <div>
+                        <h4>📊 Optimización</h4>
+                        <p>Monitoreo continuo y mejoras</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <h2 class="section-title" style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); font-weight: 800;">Transformemos Tu Empresa Hoy</h2>
+            <p style="text-align: center; margin-bottom: 3rem; opacity: 0.9;">
+                Consulta gratuita de 60 minutos • Análisis personalizado • ROI garantizado en 12 meses
+            </p>
+            
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre Completo *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Corporativo *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="company">Empresa *</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="employees-count">Número de Empleados *</label>
+                    <select id="employees-count" name="employees-count" required>
+                        <option value="">Selecciona...</option>
+                        <option value="1-10">1-10 empleados</option>
+                        <option value="11-50">11-50 empleados</option>
+                        <option value="51-200">51-200 empleados</option>
+                        <option value="201-1000">201-1000 empleados</option>
+                        <option value="1000+">Más de 1000 empleados</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="current-systems">Sistemas Actuales (ERP/CRM)</label>
+                    <input type="text" id="current-systems" name="current-systems" placeholder="ej: SAP, Salesforce, Excel...">
+                </div>
+                
+                <div class="form-group">
+                    <label for="automation-interest">¿Qué procesos quieres automatizar? *</label>
+                    <textarea id="automation-interest" name="automation-interest" placeholder="Describe brevemente los procesos manuales que consumen más tiempo en tu empresa..." required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timeline">Timeline Deseado</label>
+                    <select id="timeline" name="timeline">
+                        <option value="">Selecciona...</option>
+                        <option value="inmediato">Implementación inmediata (1-2 semanas)</option>
+                        <option value="corto">Corto plazo (1-2 meses)</option>
+                        <option value="medio">Medio plazo (3-6 meses)</option>
+                        <option value="largo">Largo plazo (6+ meses)</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="cta-button" style="width: 100%; padding: 1.25rem; font-size: 1.1rem;">
+                    🚀 Solicitar Consulta Gratuita
+                </button>
+                
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--text-secondary);">
+                    * Respuesta garantizada en 24 horas • Sin compromiso • Análisis inicial incluido
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/yo5.png" alt="CerveretaDev" class="footer-logo-img">
+                        <span>CerveretaDev</span>
+                    </div>
+                    <p>Especialista en automatización empresarial con IA. Claude Code • MCPs • Integración ERP/CRM para optimizar procesos y garantizar ROI.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#roi">ROI Calculator</a></li>
+                        <li><a href="#casos">Casos de Éxito</a></li>
+                        <li><a href="#tecnologias">Tecnologías</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios IA</h4>
+                    <ul class="footer-links">
+                        <li><a href="#servicios">Automatización ERP</a></li>
+                        <li><a href="#servicios">Marketing Automation</a></li>
+                        <li><a href="#servicios">Claude Code + MCPs</a></li>
+                        <li><a href="#servicios">Business Intelligence</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Sígueme</h4>
+                    <div class="social-links">
+                        <a href="https://github.com/cervereta" class="social-link" target="_blank" rel="noopener">GitHub</a>
+                        <a href="https://www.linkedin.com/feed/" class="social-link" target="_blank" rel="noopener">LinkedIn</a>
+                        <a href="https://x.com/home" class="social-link" target="_blank" rel="noopener">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CerveretaDev. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Button -->
+    <a href="#contacto" class="floating-contact" title="Consulta Gratuita">
+        💬
+    </a>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Initialize theme from localStorage or default to light
+        function initTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.setAttribute('data-theme', savedTheme);
+        }
+
+        // Call initTheme when the page loads
+        document.addEventListener('DOMContentLoaded', initTheme);
+
+        // ROI Calculator
+        function calculateROI() {
+            const employees = document.getElementById('employees').value;
+            const hourlyRate = document.getElementById('hourly-rate').value;
+            const manualHours = document.getElementById('manual-hours').value;
+            const errorCost = document.getElementById('error-cost').value;
+            
+            if (!employees || !hourlyRate || !manualHours) {
+                alert('Por favor, completa todos los campos obligatorios');
+                return;
+            }
+            
+            // Cálculos conservadores basados en datos reales
+            const weeklyManualCost = manualHours * hourlyRate;
+            const annualManualCost = weeklyManualCost * 52;
+            const annualErrorCost = errorCost * 12;
+            
+            // Ahorros estimados (basados en promedios de la industria)
+            const timeReduction = 0.6; // 60% reducción en tiempo manual
+            const errorReduction = 0.85; // 85% reducción en errores
+            
+            const timeSavings = annualManualCost * timeReduction;
+            const errorSavings = annualErrorCost * errorReduction;
+            const totalSavings = timeSavings + errorSavings;
+            
+            // Inversión típica basada en tamaño de empresa
+            let investment;
+            if (employees <= 10) investment = 15000;
+            else if (employees <= 50) investment = 35000;
+            else if (employees <= 200) investment = 75000;
+            else investment = 150000;
+            
+            const roi = ((totalSavings - investment) / investment * 100).toFixed(0);
+            
+            // Mostrar resultados
+            document.getElementById('roi-percentage').textContent = roi + '%';
+            document.getElementById('annual-savings').textContent = '€' + totalSavings.toLocaleString();
+            document.getElementById('investment-cost').textContent = '€' + investment.toLocaleString();
+            document.getElementById('roi-result').style.display = 'block';
+        }
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Collect form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would typically send the data to your server
+            // For now, we'll just show a success message
+            alert('¡Gracias por tu interés! Te contactaré en las próximas 24 horas para programar tu consulta gratuita.');
+            
+            // Reset form
+            this.reset();
+        });
+        
+        // Dynamic header on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 8px 32px rgba(0,0,0,0.3)';
+            } else {
+                header.style.boxShadow = 'var(--shadow)';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -626,6 +626,73 @@ body {
     background: var(--background-secondary);
 }
 
+/* Botón CTA para Automatización IA */
+.automation-cta {
+    text-align: center;
+    margin: 3rem 0;
+}
+
+.automation-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.automation-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.automation-button:hover::before {
+    left: 100%;
+}
+
+.automation-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.automation-icon {
+    font-size: 1.5rem;
+}
+
+.automation-arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.automation-button:hover .automation-arrow {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .automation-button {
+        padding: 1.2rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .automation-text {
+        font-size: 0.9rem;
+    }
+}
+
 .section-title {
     font-size: 3rem;
     font-weight: 700;
