@@ -643,14 +643,43 @@
             background: none;
             border: none;
             font-size: 1.5rem;
-            color: var(--text-color);
+            color: white;
             cursor: pointer;
+            z-index: 1001;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 2rem 0;
+                transition: left 0.3s ease;
+                z-index: 1000;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                margin: 1rem 0;
+            }
+
+            .nav-links a {
+                font-size: 1.2rem;
+                padding: 1rem 2rem;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+                width: 100%;
+                text-align: center;
+                display: block;
             }
 
             .mobile-menu-toggle {
@@ -728,7 +757,7 @@
                 <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
                 <a href="#contacto" class="cta-button">Consulta Gratuita</a>
             </div>
-            <button class="mobile-menu-toggle">☰</button>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">☰</button>
         </nav>
     </header>
 
@@ -1302,6 +1331,39 @@
             this.reset();
         });
         
+        // Mobile Menu Toggle
+        function initializeMobileMenu() {
+            const mobileToggle = document.getElementById('mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileToggle && navLinks) {
+                mobileToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    const isOpen = navLinks.classList.contains('active');
+                    mobileToggle.textContent = isOpen ? '✕' : '☰';
+                });
+                
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                        mobileToggle.textContent = '☰';
+                    });
+                });
+                
+                document.addEventListener('click', (e) => {
+                    if (!e.target.closest('nav')) {
+                        navLinks.classList.remove('active');
+                        mobileToggle.textContent = '☰';
+                    }
+                });
+            }
+        }
+
+        // Initialize mobile menu when DOM loads
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMobileMenu();
+        });
+
         // Dynamic header on scroll
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
